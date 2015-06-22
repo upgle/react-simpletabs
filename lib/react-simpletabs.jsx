@@ -94,9 +94,7 @@ var Tabs = React.createClass({
 
         return (
           <li ref={ref} key={index} className={classes}>
-            <a href='#' onClick={this.setActive.bind(this, index + 1)}>
-              {title}
-            </a>
+            <a href='#' onClick={this.setActive.bind(this, index + 1)} dangerouslySetInnerHTML={{__html: title}} />
           </li>
         );
       });
